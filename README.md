@@ -1,5 +1,5 @@
 # About
-Basic knowledge about Devops.
+Basic knowledge about Devops for a software developer.
 # Main Topics:
 
 <p>Containers with Docker and Kubernets.</p>
