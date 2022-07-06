@@ -10,3 +10,4 @@ Basic knowledge about Devops for a software developer.
 # Secundary Topis:
 <p>Basic arquitectural concepts.</p>
 <p>Basic computer network concepts.</p>
+<p>Basic internet security concepts.</p>
