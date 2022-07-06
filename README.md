@@ -8,5 +8,5 @@ Basic knowledge about Devops.
 <p>Cloud Providers like Heroku, Digital Ocean and Amazon AWS.</p>
 
 # Secundary Topis:
-<p>Basic arquitectural concepts</p>
+<p>Basic arquitectural concepts.</p>
 <p>Basic computer network concepts.</p>
