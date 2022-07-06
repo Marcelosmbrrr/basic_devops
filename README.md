@@ -2,8 +2,8 @@
 Basic knowledge about Devops.
 # Topics:
 
-Containers with Docker and Kubernets
-Agile Methods
-CI/CD Pipeline with Jenkis
-Cloud Providers like Heroku, Digital Ocean and Amazon AWS
-Computer Network
+<p>Containers with Docker and Kubernets</p>
+<p>Agile Methods</p>
+<p>CI/CD Pipeline with Jenkis</p>
+<p>Cloud Providers like Heroku, Digital Ocean and Amazon AWS</p>
+<p>Computer Network</p>
