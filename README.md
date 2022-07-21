@@ -1,7 +1,6 @@
 # About 
 Basic knowledge about Devops for a software developer. 
 # Main Topics:
-
 <p>Git and Github [V]</p>
 <p>Containers with Docker [V]</p>
 <p>Cloud Providers like Heroku and Digital Ocean [...]</p>
