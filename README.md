@@ -1,5 +1,5 @@
-# About the future content
-Basic knowledge about Devops for a software developer.
+# About 
+Basic knowledge about Devops for a software developer. 
 # Main Topics:
 
 <p>Git and Github [V]</p>
