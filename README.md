@@ -8,8 +8,3 @@ Basic knowledge about Devops for a software developer.
 <p>Agile Methods with Scrum [V]</p>
 <p>CI/CD Pipeline with Jenkis.</p>
 <p>Monitoring with Prometheus.</p>
-
-# Secundary Topis:
-<p>Basic arquitectural concepts.</p>
-<p>Basic computer network concepts.</p>
-<p>Basic internet security concepts.</p>
