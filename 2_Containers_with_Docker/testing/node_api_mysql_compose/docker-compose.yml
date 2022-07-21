@@ -1,0 +1,41 @@
+version: "3.7"
+
+volumes:
+  node_mysql:
+
+
+networks:
+  node_api_network:
+
+
+services:
+  api:
+    build: .
+    volumes:
+      - type: bind
+        source: ./
+        target: /app
+    networks:
+      - node_api_network
+    ports:
+      - 3000:3000
+    environment:
+      MYSQL_HOST: root
+      MYSQL_USER: root
+      MYSQL_PORT: 3306
+      MYSQL_PASSWORD: root
+      MYSQL_DB: shop
+    depends_on:
+      - mysql_db
+
+  mysql_db:
+    image: mysql
+    volumes:
+      - node_mysql:/var/lib/mysql
+    networks:
+      - node_api_network
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: shop
