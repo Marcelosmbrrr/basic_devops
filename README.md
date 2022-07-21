@@ -2,10 +2,10 @@
 Basic knowledge about Devops for a software developer.
 # Main Topics:
 
-<p>Agile Methods.</p>
 <p>Git and Github.</p>
 <p>Containers with Docker.</p>
 <p>Cloud Providers like Heroku, Digital Ocean and Amazon AWS.</p>
+<p>Agile Methods.</p>
 <p>CI/CD Pipeline with Jenkis.</p>
 <p>Monitoring with Prometheus.</p>
 
