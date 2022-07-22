@@ -1,0 +1,42 @@
+==== NETWORK ====
+
+Source: https://docs.docker.com/get-started/07_multi_container/
+
+Remember that containers, by default, run in isolation and don’t know anything about other processes or containers on the same machine. 
+So, how do we allow one container to talk to another? The answer is networking.
+If two containers are on the same network, they can talk to each other. If they aren’t, they can’t.
+
+Commands:
+docker network ls
+docker network create [optional_network_type] [network_name]
+
+Commands with containers:
+docker run --network [network] [image]
+docker network connect [network] [container_in_execution]
+docker network disconnect [network] [container]
+docker network inspect [network]
+docker rm [network]
+
+==== DOCKER NETWORK ====
+
+Docker supports different types of networks, each suitable for certain use cases.
+Docker allows you to build three different types of network drivers out of the box: none, bridge, and host.
+
+==== BRIDGE DRIVER - docker0 ====
+
+This is the default driver. All initialized containers connect to the network bridge.
+The bridge is a network interface called docker0 that exists between the containers and the host machine.
+It allows containers to connect to the internet and establish communication with each other.
+
+==== HOST DRIVER ====
+
+This mode only works on Linux OS machines and what it does is remove the bridge, and make the containers connect directly to the host machine's network resources.
+
+==== NONE DRIVER ====
+
+This mode is "networkless" - the container does not communicate with others or with the outside world.
+
+==== OVERLAY SWARM ====
+
+Advanced Docker networking mode for clusters created with Swarm.
+

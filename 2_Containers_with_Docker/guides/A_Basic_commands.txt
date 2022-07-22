@@ -1,0 +1,52 @@
+
+===== FLAGS ====
+
+-it (iterative terminal): abre um shell dentro do container
+-d (detach): define que a execução, com o comando "run", será em background (liberará o terminal para novos comandos)
+-p (port): define a porta de execução do container
+-f (force): força o comando
+-rm (remove): usado no comando "run", ele remove o container quando for executado
+--name: usado para nomear containers
+-t (tag): usado para definir nome e versão de imagens
+-v (volume): usado para criar volumes
+-e (exec): rodar comando no container criado
+
+==== IMAGES COMMANDS ====
+
+docker pull [image]: baixa a imagem pronta do dockerhub
+docker push [image]: envia uma imagem para um repositório pessoal do dockerhub (ela deve ter o mesmo nome do repositório (ver docker -t))
+docker build .: monta uma imagem criada a partir de um Dockerfile
+docker -t [image_id] [name]: define um nome para a imagem já montada
+docker -t [image_id] [name]:[tag]: define uma tag para a imagem já montada (versionamento) e opcionalmente um novo nome
+docker build -t [name]:[tag] .: monta uma imagem a partir de um Dockerfile e com um nome e tag customizados
+docker image ls: mostra as imagens disponíveis
+docker rmi [image_id]: deleta a imagem
+docker image inspect: inspeciona a imagem
+
+===== CONTAINER COMMANDS ====
+
+docker create [image_id]: a partir da imagem, cria, executa e para o container
+docker start [container_id]: executa um container que já foi criado e executado antes
+docker run [image]: baixa a imagem se não existir localmente, cria, e mantém a execução em modo iterativo do container
+docker run -d [image_id]: realiza um docker run em background
+docker run -d -p [pc_port]:[dockerfile_exposed_port] [image_id]: realiza um docker run em background e torna a aplicação acessível em localhost:[pc_port] (usado em containers de servidores, como apache e nginx)
+docker run --name [new_name] [image_id]: realiza um docker run criando o container com um nome customizado
+docker stop [container_id]: para a execução de um container
+docker ps: mostra os containers em execução
+docker ps -a: mostra os containers que já foram criados e executados
+docker rm [container_id]: deleta um container parado
+
+===== VOLUMES COMMANDS ====
+
+docker volume ls: list all volumes
+docker rm [volume_name]: remove a volume
+docker volume create [volume_name]: create a named volume
+docker run [args] [volume_name]:[folder_inside_container_for_mount_volume] [image_name]: run a container and defines it will use the named volume
+
+==== GENERAL COMMANDS ====
+
+docker login: realiza o login remoto na conta do dockerhub
+docker system prune: remove todas as imagens e containers não utilizados
+docker stats [container_id]: mostra os dados de processamento de um container em execução
+docker inspect [image_id or container_id]: retorna um JSON com detalhes sobre uma imagem ou um container
+

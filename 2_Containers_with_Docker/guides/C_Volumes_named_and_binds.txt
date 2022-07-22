@@ -1,0 +1,61 @@
+==== DOCKER VOLUMES - PERSISTING MODIFICATIONS ====
+
+Source: https://escoladaprogramacao.com.br/diferencas-entre-volume-e-bind-mount-no-docker/
+
+When a container runs, it uses the various layers from an image for its filesystem. 
+Each container also gets its own “scratch space” to create/update/remove files. Any changes won’t be seen in another container, even if they are using the same image.
+While containers can create, update, and delete files, those changes are lost when the container is removed and all changes are isolated to that container. 
+Thus, modifications in the container are lost when it is deleted.
+With volumes, we can change all of this.
+
+Volumes provide the ability to connect specific filesystem paths of the container back to the host machine. 
+If a directory in the container is mounted, changes in that directory are also seen on the host machine. 
+If we mount that same directory across container restarts, we’d see the same files.
+
+There are two main types of volumes. We will eventually use both, but we will start with named volumes.
+
+==== NAMED VOLUMES ====
+
+Source: https://docs.docker.com/get-started/05_persisting_data/
+
+Think of a named volume as simply a bucket of data. Docker maintains the physical location on the disk and you only need to remember the name of the volume. 
+Every time you use the volume, Docker will make sure the correct data is provided.
+This area is called "Mountpoint" and the path is /var/lib/docker/volumes/[volume_name]/_data.
+Considering this path, is compreensible why its a "named volume" - must be named because the name is used for define the path. It's like a variable in the path name.
+
+Commands:
+docker volume ls
+docker volume create [volume_name]
+docker run -d -v [volume_name]:[container_path] [image_name]
+
+Every modification that occurs with any data that exists inside "container_path" will exists be shared with /var/lib/docker/volumes/[volume_name]/_data.
+
+Example:
+
+All modified data in /etc/todos container folder will be shared to /var/lib/docker/volumes/todo-db/_data docker host folder.
+
+docker volume create todo_db
+docker run -dp 3000:3000 --name container_example_volume_a -v todo-db:/etc/todos getting-started 
+docker run -dp 3300:3000 --name container_example_volume_b -v todo-db:/etc/todos getting-started
+Or:
+docker run -d --name container_example_volume_x --mount type=volume,source=[volume_name],target=/etc/todos getting-started 
+
+There are two containers with the same volume, what, in other words, means they share the same data source.
+
+==== DOCKER BINDS ====
+
+Source: https://docs.docker.com/get-started/06_bind_mounts/
+
+In the previous chapter, we talked about and used a named volume to persist the data in our database. 
+Named volumes are great if we simply want to store data, as we don’t have to worry about where the data is stored.
+
+With bind mounts, we control the exact mountpoint on the host.
+In addition, some security issues must be considered, as a container may have access to sensitive files and directories on the host machine.
+
+Fast comparisons:
+Named Volumes location in docker host is choosed by Docker and is defined like [volume_name]:[container_path_mount]. In addition, has more resources, such as more drivers support (for S3, for example).
+Bind Mounts location is choosed by you and is defined like [local_path]:[container_path_mount]. Do not have support for more drivers and is more insecure.
+
+Command:
+docker run -d --mount type=bind, source=[localhost_path], target=[container_folder_mount]
+
