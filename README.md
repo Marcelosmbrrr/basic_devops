@@ -1,15 +1,10 @@
-# About the future content
-Basic knowledge about Devops for a software developer.
+# About 
+Basic knowledge about Devops for a software developer. 
 # Main Topics:
-
-<p>Git and Github.</p>
-<p>Containers with Docker.</p>
-<p>Cloud Providers like Heroku, Digital Ocean and Amazon AWS.</p>
-<p>Agile Methods.</p>
-<p>CI/CD Pipeline with Jenkis.</p>
-<p>Monitoring with Prometheus.</p>
-
-# Secundary Topis:
-<p>Basic arquitectural concepts.</p>
-<p>Basic computer network concepts.</p>
-<p>Basic internet security concepts.</p>
+<p>Git and Github [V]</p>
+<p>Containers with Docker [V]</p>
+<p>Cloud Providers like Heroku and Digital Ocean [...]</p>
+<p>Amazon AWS (EC2, S3 and Lambda) [...]</p>
+<p>Agile Methods with Scrum [V]</p>
+<p>CI/CD Pipeline with Jenkis [...]</p>
+<p>Monitoring with Prometheus [...]</p>
