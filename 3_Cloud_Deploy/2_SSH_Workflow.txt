@@ -1,0 +1,23 @@
+==== WHAT IS SSH ====
+
+SSH, also known as Secure Shell or Secure Socket Shell, is a network protocol that provides administrators with a secure way to access a remote computer.
+SSH establishes a cryptographically secured connection between two parties(client and server).
+
+==== CLIENT-SERVER - SSH PAIR ====
+
+SSH is client-server communication based on a cryptographic key pair.One of the keys is private and the other public.
+The private key is located on the client machine and is protected and kept secret. The public key can be given to anyone or placed on any server you want to access.
+The server will use the public key to create a message to the client computer that can only be read and responded with the private key.
+
+=== HOW CREATE A SSH PAIR KEY ====
+
+Source: https://www.ssh.com/academy/ssh/keygen#creating-an-ssh-key-pair-for-user-authentication
+
+The first way to create SSH keys is via command line and typing "ssh-keygen".
+This command, "ssh-keygen", exists in all operation systems as a native shell resource.
+
+Source: https://www.putty.org/
+
+On windows, exists the software "PuTTY" and "PuTTYgen".
+With "PuTTYgen" a SSH pair can be generated, and with PuTTY the connection can be stabilished with a remote server using SSH protocol.
+

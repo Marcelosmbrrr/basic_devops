@@ -1,43 +1,43 @@
-==== COMANDOS BÁSICOS DE IMAGENS ====
+==== IMAGES BASIC COMMANDS ====
 
-docker pull [image]: baixa a imagem pronta do dockerhub
-docker push [image_name]: envia uma imagem para um repositório pessoal do dockerhub (ela deve ter o mesmo nome do repositório (ver docker -t))
-docker build .: monta uma imagem criada a partir de um Dockerfile
-docker -t [image_id] [name]: define um nome para a imagem já montada
-docker -t [image_id] [name]:[tag]: define uma tag para a imagem já montada (versionamento) e opcionalmente um novo nome
-docker build -t [name]:[tag] .: monta uma imagem a partir de um Dockerfile e com um nome e tag customizados
-docker image ls: mostra as imagens disponíveis
-docker rmi [image_id]: deleta a imagem
-docker image inspect: inspeciona a imagem
+docker pull [image]: downloads the ready image from dockerhub
+docker push [image_name]: push an image to a personal dockerhub repository (it must have the same name as the repository (see docker -t))
+docker build.: mounts an image created from a Dockerfile
+docker -t [image_id] [name]: sets a name for the already mounted image
+docker -t [image_id] [name]:[tag]: defines a tag for the already mounted image (versioning) and optionally a new name
+docker build -t [name]:[tag] .: builds an image from a Dockerfile and with a custom name and tag
+docker image ls: shows available images
+docker rmi [image_id]: delete the image
+docker image inspect: inspect the image
 
-==== CRIANDO IMAGENS COM DOCKERFILE ====
+==== CREATING IMAGES WITH DOCKERFILE ====
 
 Fonte: https://blog.rocketseat.com.br/dockerfile-principais-comandos-para-criar-a-receita-da-imagem/#:~:text=Para%20criar%20um%20Dockerfile%20%C3%A9,docker%20build%20%2Dt%20nome_da_imagem%20.
 
-O Dockerfile nada mais é do que um meio que utilizamos para criar nossas próprias imagens. 
-Em outras palavras, ele serve como a receita para construir um container, permitindo definir um ambiente personalizado.
+The Dockerfile is nothing more than a means we use to create our own images.
+In other words, it serves as the recipe for building a container, allowing you to define a custom environment.
 
-Para criar um Dockerfile é simples, basta criar um arquivo com o nome Dockerfile.
+To create a Dockerfile is simple, just create a file with the name Dockerfile.
 
-Comandos do Dockerfile:
+Dockerfile commands:
 
-FROM: Instrução obrigatória que indica qual imagem vai ser utilizada como ponto de partida.
-RUN: Serve para executar comandos no processo de montagem da imagem. Pode existir mais de um. Ex: RUN npm install package
-CMD: Serve para executar comandos no processo de montagem do container. Só pode existir um. Ex: RUN php artisan serve
-EXPOSE: Instrução que informa qual porta deverá ser liberada para o container.
-COPY e ADD: Comandos para copiar arquivos e pastas de um lugar específico na máquina local para uma pasta no container.
-VOLUME: Criação de um volume. Ex: VOLUME /example
-WORKDIR: Define uma pasta dentro do container onde os comandos serão executados.
-USER: Podemos alterar os usuários host para executar os comandos.
-LABEL maintener: para informar o criador da imagem
-ENTRYPOINT ["caminho para o arquivo"]: define o entry point da aplicação
+FROM: Mandatory instruction that indicates which image will be used as a starting point.
+RUN: It serves to execute commands in the image mounting process. There may be more than one. Ex: RUN npm install package
+CMD: It serves to execute commands in the container assembly process. There can only be one. Ex: RUN php artisan serve
+EXPOSE: Instruction that informs which port should be released for the container.
+COPY and ADD: Commands to copy files and folders from a specific place on the local machine to a folder in the container.
+VOLUME: Creation of a volume. Ex: VOLUME /example
+WORKDIR: Defines a folder inside the container where the commands will be executed.
+USER: We can change the host users to run the commands.
+LABEL maintainer: to inform the creator of the image
+ENTRYPOINT ["path to file"]: defines the application entry point
 
-==== COMO SUBIR IMAGENS CRIADAS NO DOCKERHUB - DOCKER PUSH ====
+==== HOW PUSH IMAGES TO DOCKERHUB ====
 
-Primeiro criar um repositório no Dockerhub: https://hub.docker.com/repositories
-Depois logar no dockerhub via terminal: docker login
-Depois criar e buildar a imagem com o mesmo nome do repositório: docker build -t username/repository_name .
-Depois basta realizar o push: docker push username/repository_name 
+First you need to create a repository in dockerhub: https://hub.docker.com/repositories
+After, login into dockerhub via terminal: docker login
+After, create and build an image with the same repository name: docker build -t username/repsitory_name
+Lastly, just do a push: docker push username/repository_name
 
-Como subir novamente uma mesma imagem, mas alterada?
-Basta rebuildar a imagem com o mesmo nome, e outra tag (versionamento): docker build -t username/repository_name:new_tag_name .
+How to push the "same" image but modified?
+You need to rebuild the image with the same name and another tag (version): docker build -t username/repository_name:new_tag_name

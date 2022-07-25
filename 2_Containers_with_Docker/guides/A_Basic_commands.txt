@@ -1,40 +1,40 @@
 
 ===== FLAGS ====
 
--it (iterative terminal): abre um shell dentro do container
--d (detach): define que a execução, com o comando "run", será em background (liberará o terminal para novos comandos)
--p (port): define a porta de execução do container
--f (force): força o comando
--rm (remove): usado no comando "run", ele remove o container quando for executado
---name: usado para nomear containers
--t (tag): usado para definir nome e versão de imagens
--v (volume): usado para criar volumes
--e (exec): rodar comando no container criado
+-it (iterative terminal): open a shell inside a container 
+-d (detach): background run executation (will release the terminal for new commands)
+-p (port): define the container execution port
+-f (force): force a command to run
+-rm (remove): remover um contêiner posto em execução quando ele for parado
+--name: used for name containers
+-t (tag): used for images naming
+-v (volume): used for volume creating
+-e (exec): used for run a command in a running container
 
 ==== IMAGES COMMANDS ====
 
-docker pull [image]: baixa a imagem pronta do dockerhub
-docker push [image]: envia uma imagem para um repositório pessoal do dockerhub (ela deve ter o mesmo nome do repositório (ver docker -t))
-docker build .: monta uma imagem criada a partir de um Dockerfile
-docker -t [image_id] [name]: define um nome para a imagem já montada
-docker -t [image_id] [name]:[tag]: define uma tag para a imagem já montada (versionamento) e opcionalmente um novo nome
-docker build -t [name]:[tag] .: monta uma imagem a partir de um Dockerfile e com um nome e tag customizados
-docker image ls: mostra as imagens disponíveis
-docker rmi [image_id]: deleta a imagem
-docker image inspect: inspeciona a imagem
+docker pull [image]: downloads the ready image from dockerhub
+docker push [image]: push an image to a personal dockerhub repository (it must have the same name as the repository (see docker -t))
+docker build .: mounts an image created from a Dockerfile
+docker -t [image_id] [name]: sets a name for the already mounted image
+docker -t [image_id] [name]:[tag]: defines a tag for the already mounted image (versioning) and optionally a new name
+docker build -t [name]:[tag] .: builds an image from a Dockerfile and with a custom name and tag
+docker image ls: shows available images
+docker rmi [image_id]: delete the image
+docker image inspect: inspect the image
 
 ===== CONTAINER COMMANDS ====
 
-docker create [image_id]: a partir da imagem, cria, executa e para o container
-docker start [container_id]: executa um container que já foi criado e executado antes
-docker run [image]: baixa a imagem se não existir localmente, cria, e mantém a execução em modo iterativo do container
-docker run -d [image_id]: realiza um docker run em background
-docker run -d -p [pc_port]:[dockerfile_exposed_port] [image_id]: realiza um docker run em background e torna a aplicação acessível em localhost:[pc_port] (usado em containers de servidores, como apache e nginx)
-docker run --name [new_name] [image_id]: realiza um docker run criando o container com um nome customizado
-docker stop [container_id]: para a execução de um container
-docker ps: mostra os containers em execução
-docker ps -a: mostra os containers que já foram criados e executados
-docker rm [container_id]: deleta um container parado
+docker create [image_id]: from image, create and run a container
+docker start [container_id]: runs a container that has been already created
+docker run [image]: downloads the image if it doesn't exist locally, creates it, and keeps running iteratively from the container
+docker run -d [image_id]: perform a docker run in the background
+docker run -d -p [pc_port]:[dockerfile_exposed_port] [image_id]: performs a docker run in the background and makes the application accessible on localhost:[pc_port] (used in server containers such as apache and nginx)
+docker run --name [new_name] [image_id]: perform a docker run creating the container with a custom name
+docker stop [container_id]: stop running a container
+docker ps: show running containers
+docker ps -a: show containers that have already been created
+docker rm [container_id]: delete a stopped container
 
 ===== VOLUMES COMMANDS ====
 
@@ -45,8 +45,8 @@ docker run [args] [volume_name]:[folder_inside_container_for_mount_volume] [imag
 
 ==== GENERAL COMMANDS ====
 
-docker login: realiza o login remoto na conta do dockerhub
-docker system prune: remove todas as imagens e containers não utilizados
-docker stats [container_id]: mostra os dados de processamento de um container em execução
-docker inspect [image_id or container_id]: retorna um JSON com detalhes sobre uma imagem ou um container
+docker login: login into dockerhub account
+docker system prune: remove all images and containers that are not used anymore
+docker stats [container_id]: show container execution data 
+docker inspect [image_id or container_id]: return a JSON about a image or container
 

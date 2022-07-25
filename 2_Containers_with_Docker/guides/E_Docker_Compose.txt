@@ -2,22 +2,20 @@
 
 ler e executar o compose file: docker-compose up
 
-==== CONCEITOS ====
+==== CONCEPTS ====
 
-Fonte: https://docker-unleashed.readthedocs.io/aula2.html
-Fonte: https://imasters.com.br/banco-de-dados/docker-compose-o-que-e-para-que-serve-o-que-come
-Fonte: https://stack.desenvolvedor.expert/appendix/docker/compose.html
+Source: https://docker-unleashed.readthedocs.io/aula2.html
+Source: https://imasters.com.br/banco-de-dados/docker-compose-o-que-e-para-que-serve-o-que-come
+Source: https://stack.desenvolvedor.expert/appendix/docker/compose.html
 
-Docker Compose é o orquestrador de containers da Docker.
-Imagine o trabalho que seria executar algumas dezenas de containers manualmente na linha de comando.
-Docker compose é uma ferramenta para definição e execução de múltiplos containers Docker. Com ela é possível configurar todos os parâmetros necessários para executar cada container a partir de um arquivo de definição.
-Dentro desse arquivo, definimos cada container como um serviço.
+Docker compose is a docker containers orchestrator. 
+Imagine how much effort will cost if you need to run dozens of containers manually from the command line.
+Docker compose is a solution for this. With one file, you can describe and run multiple containers - each container is called a "service".
+In the Docker interface, a running compose appears like a named set of running containers.
 
-==== O ARQUIVO DOCKER COMPOSE ====
+==== DOCKER COMPOSE FILE ====
 
-O arquivo de definição do Docker Compose é escrito com a linguagem YAML.
-Esse arquivo serve para definir os eventos e as definições antes e depois da execução dos serviços (vulgo container).
-Por exemplo, se a aplicação terá MySQL, PHP e Laravel, cada uma dessas partes será um serviço/container, e é no composer file que todos os parâmetros de funcionamento serão setados.
-Esse arquivo por padrão tem como nome docker-compose.yml e deve ser criado no diretório root do projeto.
-O padrão YAML utiliza a indentação como separador dos blocos de códigos, assim como na linguagem Python.
-Cada linha desse arquivo pode ser definida com uma chave valor ou uma lista.
+The Docker Compose definition file is written with the YAML language.
+This file is used to define events and definitions before and after the execution of services (aka container).
+For example, if the application will have MySQL, PHP and Laravel, each of these parts will be a service/container, and it is in the composer file that all the working parameters will be declared.
+This file by default is named docker-compose.yml and must be created in the root directory of the project.

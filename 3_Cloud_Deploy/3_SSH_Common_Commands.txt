@@ -1,0 +1,14 @@
+clear: clear terminal
+ls (list): show directory contents (list the names of files)
+cd [directory] (change directory): change directory from actual to [directory]
+mkdir [name]: create a new folder
+touch [name]: create a new file
+rm [filename or path] (remove): remove a file
+rm -rm [directory or path]: remove directory and all files inside
+cat [file]: show contents of a file
+pwd (print working directory): show current directory path
+cp [folder/file] [name] (copy): copy file/folder
+mv [folder/file] [to path] (move): move a folder or file
+vi/nano [file]: text editors. How to use: https://askubuntu.com/questions/1025192/how-to-set-environment-variable-through-vi-in-ubuntu-16-04
+
+ 

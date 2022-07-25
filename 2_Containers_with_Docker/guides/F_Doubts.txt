@@ -1,0 +1,45 @@
+==== DOCKER COMPOSE, DOCKERFILE AND CLI COMMANDS ====
+
+Docker Compose and Dockerfile are different and can work together.
+Dockerfile is a recipe for a future container. The file begin with an image, and has other commands about the container organization.
+So, Dockerfile is one file that defines one image for the creating of N containers.
+
+Docker compose is a recipe for a set of containers. 
+Each container of a set of containers can be constructed from an base image from dockerhub or a custom image from a Dockerfile.
+With "image:" command you can define the base image for a service and with "build:" the customized image from a Dockerfile.
+
+Not all, but yes, some commands from Dockerfile can be writed in a Docker Compose and vice versa.
+Furthermore, some commands of both, Dockerfile and Docker Compose, can be writed in a single CLI command. 
+A Dockerfle can be replaced for a single and extensive "docker run", but the same is not truth for the docker compose.
+The "docker run" command and Dockerfile can create just one container, and compose file can create a set with multiple containers.
+
+==== DOCKERFILE CMD AND DOCKER COMPOSE COMMAND ===
+
+In the common case, you should have a Dockerfile CMD and not a Compose command.
+Compose command overrides the CMD in dockerfile.
+
+==== DOCKERFILE COPY VS VOLUME ====
+
+Source: https://www.linuxteacher.com/docker-add-vs-copy-vs-volume/
+
+So if you are doing development where you need to change the code, and you use COPY you have to re-build the image everytime you want to have your changes to be in the container.
+With volume you do not have to do rebuild your image the changes will be transfered to the container.
+Use COPY when you are ready to ship the application and you are sure you do not modify the source code anymore.
+
+==== DOCKER DEVELOPMENT: HOW UPDATED CODE WITHOUT RESTART CONTAINER ====
+
+Source: https://stackoverflow.com/questions/39615405/how-to-update-code-in-a-docker-container
+
+When you are developing your code you should mount the source/volume so that your changes are always reflected inside the container. 
+When you want to package an app for deployment you should COPY the source into the container and package it appropriately.
+
+==== READ ENVIRONMENT VARIABLES - NODE JS AND PHP ====
+
+Source: https://stackoverflow.com/questions/4870328/read-environment-variables-in-node-js
+Source: https://stackoverflow.com/questions/35479304/environment-variable-in-php-docker-container
+
+==== DOCKERFILE: COPY FROM PARENT DIRECTORY ====
+
+If you want to add/copy local content, it must be located under the same root path than the Dockerfile.
+
+
