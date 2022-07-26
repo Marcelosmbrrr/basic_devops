@@ -1,1 +1,13 @@
-git push origin [tag name]: push tag to remote repository and pointing to the last pushed commit
+==== GET REMOTE REPOSITORY ====
+
+You can clone an existing Git repository from elsewhere with "git clone [repo url]".
+
+This creates a new subdirectory named .git that contains all of your necessary repository files — a Git repository skeleton.
+
+==== COMMANDS ====
+
+git clone [repo url]: clone a remote repository
+git fetch: git fetch fetches differences from the current branch, but doesn't change anything on that branch 
+git pull: pulls down all the data from that remote project that you don’t have yet
+git push origin: push all local data for remote repository
+git remote add origin [repo url]: is used to refer to a remote repository, but do not pull anything - its just a pointer for future actions
