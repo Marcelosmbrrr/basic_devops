@@ -1,0 +1,32 @@
+==== GETTING REPOSITORY ====
+
+You can take a local directory that is currently not under version control, and turn it into a Git repository with "git init" command.
+This creates a new subdirectory named .git that contains all of your necessary repository files — a Git repository skeleton.
+
+==== COMMANDS ====
+
+git init: init a local repository
+git config [--local or --global]: used to set Git configuration values on a local or global project level. Example: git config --local user.name "Gigachad" 
+git add . or [filename]: track all files or a specific file
+git commit -m "message": commit changes with message (always required)
+git commit -am "message": add all and commit
+git log: displays all of the commits in a repository's history
+git reset: move the repository back to a previous commit , discarding any changes made after that commit
+
+git tag: show all tags
+git tag -n: show all tags with its description
+git tag -l "[tag name]": search tag by name
+git tag -a v[version] -m "message": create annotated tags. Example: git tag -a v1.0.0 -m "first version"
+git tag v[version]: create a lightweight tag. Example: git tag -a v1.0.0 
+git tag -d [tagname]: deletes tag
+
+git branch: check all branches
+git branch [name]: create new branch
+git checkout [branchname]: switch to another branch
+git diff: to compare commits, branches, files, etc
+
+git stash:
+
+==== GIT IGNORE ====
+
+You can create a file listing patterns to match them named .gitignore in the root folder for ignore the files that you dont want to control.

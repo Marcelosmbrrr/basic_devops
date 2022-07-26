@@ -1,0 +1,1 @@
+git push origin [tag name]: push tag to remote repository and pointing to the last pushed commit

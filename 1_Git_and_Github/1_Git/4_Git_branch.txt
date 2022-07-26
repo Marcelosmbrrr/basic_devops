@@ -1,0 +1,33 @@
+==== BRANCH MASTER ====
+
+The default branch name in Git is master. 
+As you start making commits, you’re given a master branch that points to the last commit you made. 
+Every time you commit, the master branch pointer moves forward automatically.
+
+==== POINTER HEAD ====
+
+The main pointer is called HEAD. So, for default, the HEAD is always "Master".
+
+==== CREATING A NEW BRANCH ====
+
+What happens when you create a new branch? Well, doing so creates a new pointer for you to move around.
+Let’s say you want to create a new branch called "gigachad". You do this with the git branch command: git branch gigachad
+With this, now, exists two branchs, and the HEAD can point to "Master" or "gigachad"
+
+==== SWITCH BRANCH ====
+
+To switch to an existing branch, you run the git checkout command: git checkout gigachad
+
+Two branches are like two different and isolated dimensions of the same repository.
+If one is different from other, the files that appears in the local folder will be different too.
+
+==== MERGE BRANCHES ====
+
+To, for example, merge the branch Master with "gigachad", type, from Master: git merge gigachad
+
+==== REBASING ====
+
+In Git, there are two main ways to integrate changes from one branch into another: the merge and the rebase.
+With the rebase command, you can take all the changes that were committed on one branch and replay them on a different branch.
+
+==== MERGE COMMON CONFLICTS ====
