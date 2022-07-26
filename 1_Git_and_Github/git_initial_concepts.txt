@@ -1,0 +1,41 @@
+==== WHAT IS GIT ====
+
+Source: https://git-scm.com/
+
+Git is a free and open source distributed version control system.
+
+==== WHAT IS VERSION CONTROLL ==== 
+
+Many people’s version-control method of choice is to copy files into another directory. This approach is very common, but is problematic for a lot of reasons.
+In software engineering, version control is a class of systems responsible for managing changes to computer programs.
+
+==== WHAT IS GIT AND HOW IT WORKS ====
+
+The major difference between Git and any other VCS (Version Control System) is the way Git thinks about its data. 
+Conceptually, most other systems store information as a list of file-based changes.
+Git doesn’t think of or store its data this way. Instead, Git thinks of its data more like a series of snapshots of a miniature filesystem. 
+With Git, every time you commit, Git basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot.
+
+==== THE THREE STATES ====
+
+Git has three main states that your files can reside in: modified, staged, and committed.
+
+- Modified means that you have changed the file but have not committed it to your database yet.
+- Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
+- Committed means that the data is safely stored in your local repository.
+
+==== GIT BASIC WORKFLOW ====
+
+The basic Git workflow goes something like this:
+
+- You modify files in your working tree.
+- You selectively stage just those changes you want to be part of your next commit, which adds only those changes to the staging area.
+- You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
+
+The most common and useful way to use Git is via command line interface.
+
+
+
+
+
+
