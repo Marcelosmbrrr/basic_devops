@@ -1,10 +1,17 @@
 # About 
 Basic knowledge about Devops for a software developer. 
-# Main Topics:
-<p>Git and Github [V]</p>
-<p>Containers with Docker [V]</p>
-<p>Cloud Providers like Heroku and Digital Ocean [...]</p>
-<p>Amazon AWS (EC2, S3 and Lambda) [...]</p>
-<p>Agile Methods with Scrum [V]</p>
-<p>CI/CD Pipeline with Jenkis [...]</p>
-<p>Monitoring with Prometheus [...]</p>
+
+# Already learned:
+<div style = "display: inline-block">
+  <img align = "center" height = "50" width = "60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain-wordmark.svg" />       
+  <img align = "center" height = "50" width = "60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" />       
+  <img align = "center" height = "50" width = "60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-plain-wordmark.svg" />       
+  <img align = "center" height = "50" width = "60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original-wordmark.svg" />         
+</div>
+
+# To learn:
+<div style = "display: inline-block">
+  <img align = "center" height = "50" width = "60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" />           
+  <img align = "center" height = "50" width = "60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original-wordmark.svg" />  
+  <img align = "center" height = "50" width = "60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" />
+</div>
